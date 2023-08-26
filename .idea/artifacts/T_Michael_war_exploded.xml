@@ -1,0 +1,41 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" external-system-id="Maven" name="T_Michael:war exploded">
+    <output-path>$PROJECT_DIR$/target/T_Michael</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>T_Michael</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="T_Michael" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:11.2.0.jre11" />
+          <element id="library" level="project" name="Maven: com.microsoft.azure:msal4j:1.13.0" />
+          <element id="library" level="project" name="Maven: com.nimbusds:oauth2-oidc-sdk:9.35" />
+          <element id="library" level="project" name="Maven: com.github.stephenc.jcip:jcip-annotations:1.0-1" />
+          <element id="library" level="project" name="Maven: com.nimbusds:content-type:2.2" />
+          <element id="library" level="project" name="Maven: com.nimbusds:lang-tag:1.6" />
+          <element id="library" level="project" name="Maven: com.nimbusds:nimbus-jose-jwt:9.22" />
+          <element id="library" level="project" name="Maven: net.minidev:json-smart:2.4.8" />
+          <element id="library" level="project" name="Maven: net.minidev:accessors-smart:2.4.8" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm:9.1" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.36" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.2.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.2" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.10.1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/T_Michael/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="T_Michael/web/Web" />
+    </root>
+  </artifact>
+</component>
