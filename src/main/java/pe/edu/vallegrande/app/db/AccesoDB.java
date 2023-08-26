@@ -14,7 +14,7 @@ public class AccesoDB {
 		String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
         String urlDB = "jdbc:sqlserver://localhost:1433;databaseName=dbBiblioTech;encrypt=true;TrustServerCertificate=True;";
 		String user="sa";
-		String pass = "1234";
+		String pass = "vg2023";
 		try {
 			// Paso 1: Cargar el driver a memoria
 			Class.forName(driver).getDeclaredConstructor().newInstance();

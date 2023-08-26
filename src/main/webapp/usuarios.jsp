@@ -36,13 +36,10 @@
 										name="btnActualizar">Actualizar</button>
 								</div>
 								<div class="col-sm-4">
-									<input type="text" class="form-control" id="names" name="names"
-										placeholder="Ingrese nombre">
+									<input type="text" class="form-control" id="buscador" name="buscador"
+									placeholder="buscar ...">
 								</div>
-								<div class="col-sm-4">
-									<input type="text" class="form-control" id="last_name"
-										name="last_name" placeholder="Ingrese apellido">
-								</div>
+
 								<div class="col-sm-2">
 									<button type="button" class="btn btn-primary mb-2"
 										id="btnBuscar" name="btnBuscar">Buscar</button>
@@ -76,11 +73,11 @@
 								</tbody>
 							</table>
 						</div>
-						<div class="dropdown">
-							<button onclick="exportToExcel()" class="btn btn-success"><i class="fa-solid fa-file-excel"></i> XLSX</button>
-							<button onclick="exportToPDF()" class="btn btn-danger"><i class="fa-solid fa-file-pdf"></i> PDF</button>
-							<button onclick="exportToCSV()" class="btn btn-warning"><i class="fa-solid fa-file-csv"></i> CSV</button>
-						</div>
+					</div>
+					<div class="dropdown">
+						<button onclick="exportToExcel()" class="btn btn-success"><i class="fa-solid fa-file-excel"></i> XLSX</button>
+						<button onclick="exportToPDF()" class="btn btn-danger"><i class="fa-solid fa-file-pdf"></i> PDF</button>
+						<button onclick="exportToCSV()" class="btn btn-warning"><i class="fa-solid fa-file-csv"></i> CSV</button>
 					</div>
 					<div class="card" id="divRegistro" style="display: none;">
 						<div class="card-header">
@@ -91,7 +88,7 @@
 								<input type="hidden" id="accion" name="accion">
 								<div class="col-md-4 d-none">
 									<label for="frmIdentifier" class="form-label">ID</label> <input
-										type="text" class="form-control" id="frmIdentifier" required>
+									type="text" class="form-control" id="frmIdentifier" required>
 								</div>
 								<div class="col-md-4">
 									<label for="frmNames" class="form-label">Nombre</label> <input
@@ -263,9 +260,9 @@
 	}
 
 	function fnBtnBuscar() {
-		let names = document.getElementById("names").value;
-		let last_name = document.getElementById("last_name").value;
-		let url = "UsersBuscar?names=" + names + "&last_name=" + last_name;
+		let buscador = document.getElementById("buscador").value;
+
+		let url = "UsersBuscar?buscador=" + buscador;
 		let xhttp = new XMLHttpRequest();
 		xhttp.open("GET", url, true);
 		xhttp.onreadystatechange = function() {

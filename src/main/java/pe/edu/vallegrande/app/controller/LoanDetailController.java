@@ -16,7 +16,7 @@ import pe.edu.vallegrande.app.model.LoanDetail;
 import pe.edu.vallegrande.app.service.CrudLoanDetailService;
 import pe.edu.vallegrande.app.service.CrudLoanService;
 
-@WebServlet({ "/LoanDetailProcesar", "/LoanDetailActualizar", "/LoanDetailHistorial", "/", "/LoanDetailID" })
+@WebServlet({ "/LoanDetailProcesar", "/LoanDetailActualizar", "/LoanDetailHistorial", "/LoanLista", "/LoanDetailID" })
 public class LoanDetailController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

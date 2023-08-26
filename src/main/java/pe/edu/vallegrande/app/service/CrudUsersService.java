@@ -90,7 +90,6 @@ public class CrudUsersService implements CrudServiceSpec<Users>, RowMapper<Users
 		}
 		return bean;
 	}
-
 	@Override
 	public List<Users> get(Users bean) {
 		Connection cn = null;
@@ -107,6 +106,43 @@ public class CrudUsersService implements CrudServiceSpec<Users>, RowMapper<Users
 			pstm = cn.prepareStatement(sql);
 			pstm.setString(1, names);
 			pstm.setString(2, last_name);
+			rs = pstm.executeQuery();
+			while(rs.next()) {
+				item = mapRow(rs);
+				lista.add(item);
+			}
+			rs.close();
+			pstm.close();
+		} catch (SQLException e) {
+			throw new RuntimeException();
+		} finally {
+			try {
+				cn.close();
+			} catch (Exception e2) {
+			}
+		}
+		return lista;
+	}
+
+	public List<Users> getBuscar(String buscar) {
+		Connection cn = null;
+		List<Users> lista = new ArrayList<>();
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		Users item;
+		String buscador, sql;
+		buscador = "%" + UtilService.setStringVacio(buscar) + "%";
+
+		try {
+			cn = AccesoDB.getConnection();
+			sql = SQL_SELECT_ACTIVE + " WHERE names LIKE ? OR last_name  LIKE ? OR document_type  LIKE ? OR document_number  LIKE ?  OR email  LIKE ?  OR cellphone  LIKE ?  ";
+			pstm = cn.prepareStatement(sql);
+			pstm.setString(1, buscador);
+			pstm.setString(2, buscador);
+			pstm.setString(3, buscador);
+			pstm.setString(4, buscador);
+			pstm.setString(5, buscador);
+			pstm.setString(6, buscador);
 			rs = pstm.executeQuery();
 			while(rs.next()) {
 				item = mapRow(rs);

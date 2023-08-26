@@ -81,13 +81,9 @@ public class UsersController extends HttpServlet {
 	private void buscar(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// Datos
-		String names = request.getParameter("names");
-		String last_name = request.getParameter("last_name");
+		String buscador = request.getParameter("buscador");
 		// Proceso
-		Users bean = new Users();
-		bean.setNames(names);
-		bean.setLast_name(last_name);
-		List<Users> lista = service.get(bean);
+		List<Users> lista = service.getBuscar(buscador);
 		// Preparando el JSON
 		Gson gson = new Gson();
 		String data = gson.toJson(lista);

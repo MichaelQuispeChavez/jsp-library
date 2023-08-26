@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>pe.edu.vallegrande</groupId>
-	<artifactId>SistemaBiblioteca</artifactId>
+	<artifactId>T_Michael</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>SistemaBiblioteca</name>
+	<name>T_Michael</name>
 	<description>SistemaBiblioteca</description>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
@@ -53,7 +53,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>SistemaBiblioteca</finalName>
+		<finalName>T_Michael</finalName>
 		<pluginManagement>
 			<!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
 			<plugins>
