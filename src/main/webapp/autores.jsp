@@ -39,15 +39,11 @@
 									<input type="text" class="form-control" id="names" name="names"
 										placeholder="Ingrese nombre">
 								</div>
-								<div class="col-sm-4">
-									<input type="text" class="form-control" id="last_name"
-										name="last_name" placeholder="Ingrese apellido">
-								</div>
 								<div class="col-sm-2">
 									<button type="button" class="btn btn-primary mb-2"
 										id="btnBuscar" name="btnBuscar">Buscar</button>
 								</div>
-								<div class="col-sm-2">
+								<div class="col-6">
 									<button type="button" class="btn btn-success float-end mb-2"
 										id="btnNuevo" name="btnNuevo">Nuevo</button>
 								</div>
